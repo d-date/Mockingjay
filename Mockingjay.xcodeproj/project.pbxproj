@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2705946B1C4FA7A6002A3AA9 /* MockingjayXCTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705946A1C4FA7A6002A3AA9 /* MockingjayXCTestTests.swift */; };
-		2715FACF1D8C81AB00A89DF7 /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2715FAC91D8C818C00A89DF7 /* URITemplate.framework */; };
 		274367921AA27A7C0030C97B /* Mockingjay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274367911AA27A7C0030C97B /* Mockingjay.swift */; };
 		274367941AA27AAD0030C97B /* MockingjayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274367931AA27AAD0030C97B /* MockingjayProtocol.swift */; };
 		274367961AA27B170030C97B /* MockingjayProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274367951AA27B170030C97B /* MockingjayProtocolTests.swift */; };
@@ -23,6 +22,7 @@
 		27703A631CE2560600194732 /* MockingjayURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 27703A621CE2560600194732 /* MockingjayURLSessionConfiguration.m */; };
 		444EA6091C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444EA6081C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift */; };
 		444EA60C1C52666D000C3A9F /* TestAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 444EA60B1C52666D000C3A9F /* TestAudio.m4a */; };
+		512F4EF42253202800036893 /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2715FAC91D8C818C00A89DF7 /* URITemplate.framework */; };
 		A1E3C5701AA4EA130069C998 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743679B1AA28D4D0030C97B /* XCTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2715FACF1D8C81AB00A89DF7 /* URITemplate.framework in Frameworks */,
+				512F4EF42253202800036893 /* URITemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +113,10 @@
 		2715FABE1D8C818C00A89DF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2715FACB1D8C818C00A89DF7 /* URITemplateTests.xctest */,
-				2715FAC91D8C818C00A89DF7 /* URITemplate.framework */,
 				2715FAC71D8C818C00A89DF7 /* PathKit.framework */,
 				2715FAC51D8C818C00A89DF7 /* Spectre.framework */,
+				2715FAC91D8C818C00A89DF7 /* URITemplate.framework */,
+				2715FACB1D8C818C00A89DF7 /* URITemplateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +129,7 @@
 				2746CDC11A702F7800719B66 /* Mockingjay */,
 				2746CDCE1A702F7800719B66 /* MockingjayTests */,
 				2746CDC01A702F7800719B66 /* Products */,
+				512F4EF32253202800036893 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -210,6 +211,13 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		512F4EF32253202800036893 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -268,25 +276,26 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Cocode;
 				TargetAttributes = {
 					2746CDBE1A702F7800719B66 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1020;
 					};
 					2746CDC91A702F7800719B66 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 2746CDB91A702F7800719B66 /* Build configuration list for PBXProject "Mockingjay" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2746CDB51A702F7800719B66;
 			productRefGroup = 2746CDC01A702F7800719B66 /* Products */;
@@ -397,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -405,12 +415,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -452,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -460,12 +473,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -520,8 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -549,8 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -568,8 +581,7 @@
 				INFOPLIST_FILE = Tests/MockingjayTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -582,8 +594,7 @@
 				INFOPLIST_FILE = Tests/MockingjayTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
